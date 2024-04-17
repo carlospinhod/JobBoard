@@ -45,6 +45,12 @@
                                 Register
                             </x-nav-link>
                         @endguest
+                        @auth
+                            <form method="POST" action="/logout">
+                                @csrf
+                                <x-form-button>Log out</x-form-button>
+                            </form>
+                        @endguest
                     </div>
                 </div>
                 <div class="-mr-2 flex md:hidden">
